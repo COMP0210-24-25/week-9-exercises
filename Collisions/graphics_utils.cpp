@@ -6,6 +6,7 @@ using namespace std;
 
 static SDL_Window *window = NULL;
 static SDL_Renderer *renderer = NULL;
+static std::vector<SDL_FPoint> points(64);
 
 void DrawCircle(SDL_Renderer *renderer, float centreX, float centreY, float radius)
 {
@@ -17,8 +18,7 @@ void DrawCircle(SDL_Renderer *renderer, float centreX, float centreY, float radi
     int ty = 1;
     int error = (tx - diameter);
 
-    std::vector<SDL_FPoint> points;
-
+    points.clear();
     while (x >= y)
     {
         //  Each of the following renders an octant of the circle
