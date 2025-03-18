@@ -62,7 +62,7 @@ void CheckForEvents(bool &keep_going, int n_proc, int rank)
     {
         if (i != rank)
         {
-            MPI_Send(&keep_going, 1, MPI::BOOL, i, 0, MPI_COMM_WORLD);
+            MPI_Send(&keep_going, 1, MPI_BOOL, i, 0, MPI_COMM_WORLD);
         }
     }
 }
@@ -112,7 +112,7 @@ void CheckForTerminationSignal(int n_proc, int rank, bool &keep_going)
     {
         if (i != rank)
         {
-            MPI_Recv(&keep_going, 1, MPI::BOOL, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+            MPI_Recv(&keep_going, 1, MPI_BOOL, i, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
         }
     }
 }
