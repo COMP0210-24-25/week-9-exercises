@@ -1,14 +1,3 @@
-/* clear.c ... */
-
-/*
- * This example code creates an SDL window and renderer, and then clears the
- * window to a different color every frame, so you'll effectively get a window
- * that's smoothly fading between colors.
- *
- * This code is public domain. Feel free to use it for any purpose!
- */
-
-// #define SDL_MAIN_USE_CALLBACKS 1  /* use the callbacks instead of main() */
 #ifdef GRAPHICS
 #include "graphics_utils.h"
 #endif 
@@ -18,9 +7,6 @@
 #include "circle_collider.hpp"
 #include <string>
 #include <stdexcept>
-
-/* We will use this renderer to draw into this window every frame. */
-
 
 int main()
 {
@@ -105,7 +91,7 @@ int main()
 
     // exit
     MPI_Finalize();
-    return 0; /* end the program, reporting success to the OS. */
+    return 0; 
 }
 
 
